@@ -1,0 +1,22 @@
+#indef game_H
+#define game_H
+#include <iostream> 
+#include <cstring>
+#include "media.h" 
+
+using namespace std; 
+
+class game : public Media
+{
+ public:
+  game(); 
+  virtual int gettype(); 
+  char* getpub(); 
+  float* getrate(); 
+
+ private:  
+  char pub[20]; 
+  float rate;
+};
+
+#endif

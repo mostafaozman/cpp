@@ -1,0 +1,9 @@
+#include <iostream>
+#include "node.h"
+
+using namespace std;
+
+void Add(int newVal)l;
+void print(Node* next);
+
+Node* head = NULL; 

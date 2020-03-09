@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+void add(int value); 
+
+char[] heap;
+int capacity;
+int position; 
+
+int main()
+{
+
+
+
+  return 0; 
+}
+
+void add(int value)
+{
+  
+}

@@ -1,0 +1,22 @@
+#include <iostream> 
+#include <cstdlib>
+#include <vector>
+#include <string.h>
+#include "game.h"
+#include "movie.h"
+#include "music.h"
+#include "media.h"
+
+using namespace std;
+
+void add(vector<Media*>*media, int type); 
+void search(vector<Media*>*meida);
+void del(vector<Media*>*media  
+
+
+int main()
+{
+
+
+  return 0; 
+}

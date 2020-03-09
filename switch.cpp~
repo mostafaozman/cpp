@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cstring>
+
+using namespace std; 
+
+int main()
+{
+  char input[51]; 
+  char output[51]; 
+
+  cout << "Please enter a phrase and this program will switch the first two lwtters of every word" << endl;
+  cin.get(input, 51); 
+  cin.clear(); 
+  cin.ignore(10000, '\n'); 
+
+  for (int i = 0; i  < strlen(input); i++)
+    {
+      if(input[i] ==  ' ')
+	{
+	  input[i] = input[i-1];
+	}
+      output += input[i]; 
+    }
+
+  return  0; 
+}

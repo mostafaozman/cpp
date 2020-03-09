@@ -1,0 +1,22 @@
+#indef room_h
+#define room_h
+
+#include <iostream>
+#include <cstring>
+#include <map>
+
+using namespace std;
+
+class room
+{
+ public:
+  Room(); 
+
+  char* getDes();
+  map<int, char*>* getExits(); 
+  int getItem(); 
+  
+
+
+
+} 

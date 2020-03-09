@@ -1,6 +1,3 @@
-/*
-By: Mostafa Osman, Student List: This program will let you add to a list, 
- */
 #include <iostream> 
 #include <cstdlib>
 #include <iomanip>
@@ -19,15 +16,13 @@ struct Student
 };
 
 void Print(vector<Student*> pstudent); 
-Student* ADD();
-void Delete(vector<Student*>* pstudent, int deleteid);    
+Student* ADD();   
 
 int main()
 {
   char input[7]; 
   Student Mo; 
   int i = 1; 
-  int deleteid; 
   vector<Student*> pstudent; 
 
   while (int i = 1)
@@ -36,25 +31,30 @@ int main()
       cin >> input;
   if (strcmp(input, "ADD") == 0)
     { 
-      cout << "Add function" << endl;
+   
+
       pstudent.push_back(ADD());
+      
    }
   
   if (strcmp(input, "PRINT") == 0)
     {
+      /*
+      cout << "Print Function";
+      
+      vector<Student*>::iterator ptr;
+
+      for (ptr = pstudent.begin(); ptr < pstudent.end(); ++ptr)
+	{
+	  cout << (*ptr) -> FirstName << "n " << (*ptr) -> LastName << ", " << (*ptr) <<
+	    (*ptr) -> id << " " << (*ptr) -> gpa << endl; 
+	    }*/
       Print(pstudent); 
     }
 
   if (strcmp(input, "DELETE") == 0)
     {
       cout << "Delete Funtion";
-      cout << "\nPlease enter the ID you want to delete\n";
-
-      cin >> deleteid; 
-      Delete(&pstudent, deleteid); 
-      cout << "\nDeleted." << endl; 
-      cin.clear(); 
-      cin.ignore(10000000, '\n'); 
     }
 
   else if ((!(strcmp(input, "ADD") == 0)) || (!(strcmp(input, "PRINT") == 0)) || (!(strcmp(input, "DELETE") == 0)))
@@ -65,6 +65,7 @@ int main()
 
   return 0; 
 }
+
 
 void Print(vector<Student*> pstudent)
 {
@@ -86,7 +87,6 @@ Student* ADD()
 
   cout << "Please enter the students first name: \n"  << endl;
   cin >> pupil->FirstName;
-  // clear and ignore after each one
   cout << "Please enter the students last name: \n" << endl;
   cin >> pupil->LastName;
   cout << "Please enter the students ID: \n" << endl;
@@ -101,19 +101,4 @@ Student* ADD()
   cout << "GPA: " << fixed << setprecision(2) << pstudent -> gpa << "\n";
   */
   return pupil; 
-}
-
-void Delete (vector<Student*>* pstudent, int deleteid)
-{
-  vector<Student*>::iterator a; 
-  for (a = pstudent -> begin(); a != pstudent -> end(); ++a)
-    {
-      if ((*a) -> id == deleteid)
-	{
-	  delete *a; 
-	  pstudent -> erase(a);
-	  cin.get(); 
-	  return; 
-	}
-    }
 }

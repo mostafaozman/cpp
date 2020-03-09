@@ -1,0 +1,15 @@
+#include <iostream>
+#include <cstring>
+#include "tree.h"
+
+using namespace std;
+
+Stack *top = NULL;
+Stack *bottom=NULL;
+
+tree* buildTree();
+
+int main()
+{
+
+}
